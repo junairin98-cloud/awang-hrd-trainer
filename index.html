@@ -3,34 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awang Junairin | HRD Corp Trainer</title>
+<title>AWARI | HRD Corp Trainer</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#f4f7fb;
 color:#222;
 scroll-behavior:smooth;
 }
 
+/* SIDEBAR */
+
+.sidebar{
+height:100%;
+width:0;
+position:fixed;
+z-index:1000;
+top:0;
+left:0;
+background:#0f172a;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:60px;
+}
+
+.sidebar a{
+padding:14px 30px;
+text-decoration:none;
+font-size:20px;
+color:white;
+display:block;
+transition:0.3s;
+}
+
+.sidebar a:hover{
+background:#2563eb;
+}
+
+.sidebar .closebtn{
+position:absolute;
+top:10px;
+right:20px;
+font-size:36px;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+background:#2563eb;
+color:white;
+padding:12px 16px;
+border-radius:10px;
+font-size:22px;
+cursor:pointer;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+
 header{
 background:linear-gradient(135deg,#020617,#1e3a8a);
 color:white;
-padding:90px 20px;
-text-align:center;
-}
-
-.logo{
-margin:auto;
-margin-bottom:30px;
+padding:100px 20px;
 text-align:center;
 }
 
 .logo img{
 width:240px;
 max-width:90%;
+margin-bottom:25px;
 filter:drop-shadow(0 10px 25px rgba(0,0,0,0.4));
 }
 
@@ -65,12 +111,13 @@ text-decoration:none;
 border-radius:12px;
 font-weight:bold;
 transition:0.3s;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .btn:hover{
 transform:translateY(-3px);
 }
+
+/* SECTION */
 
 section{
 padding:80px 20px;
@@ -91,7 +138,6 @@ font-size:18px;
 line-height:1.9;
 max-width:900px;
 margin:auto;
-color:#444;
 }
 
 .cards{
@@ -113,9 +159,26 @@ transform:translateY(-5px);
 }
 
 .card h3{
-margin-top:0;
 color:#2563eb;
 }
+
+/* TRAINING GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FLYER */
 
 .flyer{
 background:white;
@@ -127,10 +190,7 @@ margin:auto;
 text-align:center;
 }
 
-.flyer h2{
-color:#2563eb;
-font-size:32px;
-}
+/* CONTACT */
 
 .contact{
 background:#0f172a;
@@ -140,10 +200,7 @@ padding:60px 30px;
 text-align:center;
 }
 
-.contact h2{
-font-size:36px;
-margin-bottom:20px;
-}
+/* FOOTER */
 
 footer{
 background:#111827;
@@ -152,6 +209,8 @@ text-align:center;
 padding:25px;
 margin-top:40px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -177,16 +236,32 @@ font-size:38px;
 font-size:32px;
 }
 
-.flyer{
-padding:30px 20px;
-}
-
 }
 
 </style>
 </head>
 
 <body>
+
+<!-- SIDEBAR -->
+
+<div id="mySidebar" class="sidebar">
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+<a href="#about">About</a>
+<a href="#training">Training</a>
+<a href="#gallery">Gallery</a>
+<a href="#flyer">Upcoming Training</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="menu-btn" onclick="openNav()">
+☰
+</div>
+
+<!-- HEADER -->
 
 <header>
 
@@ -214,19 +289,23 @@ Upcoming Training
 
 </header>
 
-<section>
+<!-- ABOUT -->
+
+<section id="about">
 
 <h2 class="section-title">
 About Me
 </h2>
 
 <p class="about">
-Awang Junairin is a professional accredited HRD Corp trainer specializing in leadership development, workplace communication, customer service excellence, and team performance enhancement. His training programs are designed to deliver practical workplace impact through engaging, interactive, and results-driven learning experiences tailored for modern organizations across Malaysia.
+Awang Junairin is a professional accredited HRD Corp trainer specializing in leadership development, workplace communication, customer service excellence, and team performance enhancement.
 </p>
 
 </section>
 
-<section>
+<!-- TRAINING -->
+
+<section id="training">
 
 <h2 class="section-title">
 Training Programs
@@ -236,68 +315,51 @@ Training Programs
 
 <div class="card">
 <h3>Leadership Excellence</h3>
-<p>
-Develop leadership confidence, communication skills, and workplace influence.
-</p>
+<p>Develop leadership confidence and workplace influence.</p>
 </div>
 
 <div class="card">
 <h3>Customer Service Excellence</h3>
-<p>
-Enhance customer satisfaction and professional service delivery.
-</p>
+<p>Enhance customer satisfaction and service delivery.</p>
 </div>
 
 <div class="card">
 <h3>Team Building</h3>
-<p>
-Improve teamwork, workplace culture, and employee motivation.
-</p>
+<p>Improve teamwork and employee motivation.</p>
 </div>
 
 <div class="card">
 <h3>Professional Communication</h3>
-<p>
-Master workplace communication and interpersonal effectiveness.
-</p>
+<p>Master workplace communication effectiveness.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- GALLERY -->
+
+<section id="gallery">
 
 <h2 class="section-title">
-Why Choose Me
+Training Gallery
 </h2>
 
-<div class="cards">
+<div class="gallery">
 
-<div class="card">
-<h3>HRD Corp Ready</h3>
-<p>
-Training programs aligned with HRD Corp standards and company learning goals.
-</p>
-</div>
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
 
-<div class="card">
-<h3>Interactive Learning</h3>
-<p>
-Practical and engaging sessions with discussions, activities, and real-world case studies.
-</p>
-</div>
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop">
 
-<div class="card">
-<h3>Professional Delivery</h3>
-<p>
-Modern corporate training solutions tailored for organizational growth and performance.
-</p>
-</div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200&auto=format&fit=crop">
 
 </div>
 
 </section>
+
+<!-- FLYER -->
 
 <section id="flyer">
 
@@ -307,12 +369,12 @@ Upcoming Public Training
 
 <div class="flyer">
 
-<h2>
+<h2 style="color:#2563eb;">
 Leadership & Workplace Communication Masterclass
 </h2>
 
 <p>
-Enhance workplace communication, leadership confidence, and employee productivity through interactive HRD Corp claimable training.
+Enhance workplace communication and leadership confidence through interactive HRD Corp claimable training.
 </p>
 
 <hr style="margin:30px 0;">
@@ -322,8 +384,6 @@ Enhance workplace communication, leadership confidence, and employee productivit
 <p><strong>📍 Venue:</strong> Tawau, Sabah</p>
 
 <p><strong>⏰ Time:</strong> 9:00 AM - 5:00 PM</p>
-
-<p><strong>🎯 Participants:</strong> Executives, Supervisors, Team Leaders</p>
 
 <br>
 
@@ -335,6 +395,8 @@ Reserve Seat Now
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
 <div class="contact">
@@ -342,10 +404,6 @@ Reserve Seat Now
 <h2>
 Contact Awang Junairin
 </h2>
-
-<p>
-Ready to organize professional HRD Corp claimable training for your organization?
-</p>
 
 <p>
 📞 014-296 9277
@@ -364,13 +422,25 @@ Ready to organize professional HRD Corp claimable training for your organization
 </section>
 
 <footer>
-© 2026 AWARI Training & Consultancy | Awang Junairin
+© 2026 AWARI Training & Consultancy
 </footer>
 
 <a class="whatsapp"
 href="https://wa.me/60142969277?text=Hello%20I'm%20interested%20for%20Training">
 WhatsApp
 </a>
+
+<script>
+
+function openNav() {
+document.getElementById("mySidebar").style.width = "260px";
+}
+
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+}
+
+</script>
 
 </body>
 </html>
